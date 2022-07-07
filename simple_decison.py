@@ -3,6 +3,7 @@ import random
 import PySimpleGUI as sg
 from soupsieve import select
 
+
 class DecidaPorMim():
     def __init__(self) -> None:
         self.resposta = [
@@ -13,6 +14,7 @@ class DecidaPorMim():
             'Não, ainda tem tempo para pensar!',
             'Isso não é ideia boy',
             'AMAZIINNNN, claro que sim!!'
+            'VAMO TESTA'
         ]
 
     def Iniciar(self):
@@ -26,13 +28,13 @@ class DecidaPorMim():
         ]
         # Janela
         self.janela = sg.Window('Decida por mim!', layout=layout)
-        while True: 
+        while True:
             # Valores
             self.eventos, self.valores = self.janela.Read()
             # Acão
             if self.eventos == 'Decida por mim':
                 print(random.choice(self.resposta))
-                
+
 
 decida = DecidaPorMim()
 decida.Iniciar(
